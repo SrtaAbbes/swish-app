@@ -1,4 +1,10 @@
 package br.edu.ifg.luziania.model.entity;
-
+import jakarta.persistence.*;
+@Entity
+@Table
 public class JogadorTime {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+
 }
