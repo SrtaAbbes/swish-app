@@ -1,10 +1,18 @@
 package br.edu.ifg.luziania.model.entity;
-import jakarta.persistence.*;
-@Entity
-@Table
-public class JogadorTime {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
 
+public class JogadorTime {
+
+    private int posicaoJogadorFila;
+
+    public JogadorTime(int posicaoJogadorFila) {
+        this.posicaoJogadorFila = posicaoJogadorFila;
+    }
+
+    public int getPosicaoJogadorFila() {
+        return posicaoJogadorFila;
+    }
+
+    public void setPosicaoJogadorFila(int posicaoJogadorFila) {
+        this.posicaoJogadorFila = posicaoJogadorFila;
+    }
 }

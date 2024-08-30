@@ -1,13 +1,27 @@
 package br.edu.ifg.luziania.model.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.*;
-@Entity
-@Table
 public class Perfil {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    private int codigoPerfil;
+    private String nomePerfil;
+
+    public Perfil(int codigo, String nome) {
+        this.codigoPerfil = codigo;
+        this.nomePerfil = nome;
+    }
+
+    public int getCodigo() {
+        return codigoPerfil;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigoPerfil = codigo;
+    }
+
+    public String getNome() {
+        return nomePerfil;
+    }
+
+    public void setNome(String nome) {
+        this.nomePerfil = nome;
+    }
 }
