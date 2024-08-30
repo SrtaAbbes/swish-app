@@ -1,9 +1,20 @@
 package br.edu.ifg.luziania.model.entity;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
+@Table
 public class Partida {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+
+    @Column
+    @OneToOne(mappedBy = "partida")
+    private QuadraPartida quadraPartida;
+
+
     private String Jogador;
     private String time01;
     private String time02;
