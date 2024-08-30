@@ -17,8 +17,8 @@ public class Quadra {
     @Column
     private String nome;
 
-    @OneToOne(mappedBy = "quadra")
-    private Usuario proprietario;
+    @OneToOne(mappedBy = "proprietario")
+    private ProprietarioQuadra proprietario;
 
     @Column (nullable = false)
     private Boolean ativa;
@@ -62,11 +62,11 @@ public class Quadra {
         this.jogadorFilaList = jogadorFilaList;
     }
 
-    public Usuario getProprietario() {
+    public ProprietarioQuadra getProprietario() {
         return proprietario;
     }
 
-    public void setProprietario(Usuario proprietario) {
+    public void setProprietario(ProprietarioQuadra proprietario) {
         this.proprietario = proprietario;
     }
 
