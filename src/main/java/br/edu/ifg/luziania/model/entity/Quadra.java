@@ -36,7 +36,7 @@ public class Quadra {
     public Quadra() {
     }
 
-    public Quadra(String nome, Usuario proprietario, Boolean ativa) {
+    public Quadra(String nome, ProprietarioQuadra proprietario, Boolean ativa) {
         this.nome = nome;
         this.proprietario = proprietario;
         this.ativa = ativa;
