@@ -15,4 +15,43 @@ public class JogadorFila {
     @JoinColumn(name = "quadra_id", referencedColumnName = "id")
     private Quadra quadra;
 
+    @Column
+    private Integer posicao;
+
+
+
+    public JogadorFila(){
+    }
+    public JogadorFila(Usuario usuario, Quadra quadra) {
+        this.usuario = usuario;
+        this.quadra = quadra;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Quadra getQuadra() {
+        return quadra;
+    }
+
+    public void setQuadra(Quadra quadra) {
+        this.quadra = quadra;
+    }
+
+    public Integer getPosicao() {
+        return posicao;
+    }
+
+    public void setPosicao(Integer posicao) {
+        this.posicao = posicao;
+    }
 }
